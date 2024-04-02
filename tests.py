@@ -2,7 +2,7 @@ import pytest
 import requests
 
 #CRUD
-BASE_URL = 'htpp://127.0.0.1:5000'
+BASE_URL = 'http://127.0.0.1:5000'
 tasks = []
 
 def test_create_task():
@@ -11,5 +11,5 @@ def test_create_task():
         "description": "Descricao da nova tarefa"
     }
 
-    response = requests.post(f"{BASE_URL}/tasks/", json=new_task_data)
+    response = requests.post(f"{BASE_URL}/tasks", json=new_task_data)
     assert response.status_code == 200
