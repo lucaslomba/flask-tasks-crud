@@ -48,7 +48,7 @@ def update_task(id):
     task.description = data['description']
     task.completed = data['completed']
 
-    return jsonify({"messsage": "Tarefa atualizada com sucesso!"})
+    return jsonify({"message": "Tarefa atualizada com sucesso!"})
 
 
 @app.route('/tasks/<int:id>', methods=['DELETE'])
